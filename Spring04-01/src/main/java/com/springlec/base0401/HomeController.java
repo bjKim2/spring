@@ -103,7 +103,8 @@ public class HomeController {
 		model.addAttribute("pw",request.getParameter("pw"));
 		
 		return "login/loginCheck";
-	}	
+	}
+	
 	@RequestMapping("test")
 	public String test() {
 		return "test";

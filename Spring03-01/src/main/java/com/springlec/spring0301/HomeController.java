@@ -30,9 +30,7 @@ public class HomeController {
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
 		String formattedDate = dateFormat.format(date);
-		
 		model.addAttribute("serverTime", formattedDate );
 		
 		return "home";
@@ -41,6 +39,7 @@ public class HomeController {
 	@RequestMapping("view")
 	public String view() {
 		return "view";
+		
 	}
 	
 	@RequestMapping("content")
@@ -48,7 +47,6 @@ public class HomeController {
 		model.addAttribute("id",30);
 		return "content";
 	}
-
 	
 	@RequestMapping("reply")
 	public ModelAndView reply() {
@@ -61,9 +59,9 @@ public class HomeController {
 	
 	@RequestMapping("test/view1")
 	public String view1(Model model) {
-		
 		model.addAttribute("num",1);
 		return "test/view1";
+		
 	}
 	
 	@RequestMapping("test/viewcontrol")
@@ -78,6 +76,7 @@ public class HomeController {
 		}else if(num == 2) {
 			view3();
 		}
+		
 	}
 	
 	@RequestMapping("test/view2")
@@ -91,8 +90,6 @@ public class HomeController {
 		
 		return "test/view3";
 	}
-		
-	
 	
 }
 
